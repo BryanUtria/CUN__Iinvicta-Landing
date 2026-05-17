@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- CAROUSEL FUNCTIONALITY ---
     const carouselTrack = document.getElementById('carouselTrack');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    
+
     // Images array
     const imagePath = 'images/';
     const images = [
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CART FUNCTIONALITY ---
     let cart = [];
     const productPrice = 700000;
-    
+
     const cartBtn = document.getElementById('cartBtn');
     const cartModal = document.getElementById('cartModal');
     const closeCart = document.getElementById('closeCart');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderCart() {
         cartCount.textContent = cart.length;
-        
+
         if (cart.length === 0) {
             cartItemsContainer.innerHTML = '<p class="empty-cart">El carrito está vacío</p>';
             cartTotalValue.textContent = '$0';
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         cart.forEach((item, index) => {
             total += item.price;
-            
+
             const itemElement = document.createElement('div');
             itemElement.className = 'cart-item';
             itemElement.innerHTML = `
@@ -131,36 +131,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LEAD GENERATION FORM ---
     const leadForm = document.getElementById('leadForm');
-    
+
     leadForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const name = document.getElementById('name').value;
-        
+
         // Simulating form submission
         const submitBtn = leadForm.querySelector('.submit-btn');
         const originalText = submitBtn.textContent;
-        
+
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
         submitBtn.disabled = true;
-        
+
         setTimeout(() => {
             submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Registro Exitoso!';
             submitBtn.style.background = '#10b981'; // Green color for success
-            
+
             // Show alert
-            alert(`¡Gracias ${name}! Te has registrado correctamente para el sorteo y tu descuento del 15%. Revisa tu correo electrónico para más detalles.`);
-            
+            alert(`¡Gracias ${name}! Te has registrado correctamente para el sorteo gratuito. Revisa tu correo electrónico para más detalles.`);
+
             // Reset form
             leadForm.reset();
-            
+
             // Reset button after 3 seconds
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.background = '';
                 submitBtn.disabled = false;
             }, 3000);
-            
+
         }, 1500);
     });
 

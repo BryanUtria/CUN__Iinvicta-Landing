@@ -10,7 +10,7 @@ Cuenta con:
 - Diseño premium enfocado en la dualidad estética (deportivo/elegante).
 - Carrusel dinámico de imágenes del producto.
 - Simulación de un carrito de compras interactivo para medir la intención de venta.
-- Formulario de captación de leads (Nombre, Correo, Teléfono) para un sorteo promocional y entrega de códigos de descuento.
+- Formulario de captación de leads (Nombre, Correo, Teléfono) para participar en un sorteo promocional gratuito.
 
 ## 🛠️ Programas Requeridos
 Al ser un proyecto estático construido con estándares web puros (HTML5, CSS3, Vanilla JavaScript), **no requiere la instalación de librerías ni frameworks pesados**. Solo necesitas:
