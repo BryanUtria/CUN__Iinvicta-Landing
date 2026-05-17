@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVICTA I-TECH 006 | El Smartwatch Híbrido Definitivo</title>
+    <meta name="description" content="Descubre el smartwatch híbrido INVICTA I-TECH 006. Elegancia para la oficina, potencia para el deporte. Únete al bienestar.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">INVICTA <span>I-TECH</span></div>
+        <div class="nav-links">
+            <a href="#features">Características</a>
+            <a href="#galeria">Galería</a>
+            <a href="#sorteo">Sorteo</a>
+        </div>
+        <div class="cart-icon" id="cartBtn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-cart" id="closeCart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">El carrito está vacío</p>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalValue">$0</span>
+            </div>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>El equilibrio perfecto entre <span>productividad</span> y <span>bienestar</span>.</h1>
+            <p>Conoce el INVICTA I-TECH 006. Un smartwatch diseñado para el "Caminante Consciente". Rendimiento deportivo con estética empresarial.</p>
+            <div class="hero-actions">
+                <button class="primary-btn" id="addToCartHero">
+                    <span class="btn-text">Comprar Ahora</span>
+                    <div class="price-container">
+                        <span class="old-price">$1.500.000</span>
+                        <span class="new-price">$700.000 COP</span>
+                    </div>
+                </button>
+                <a href="#sorteo" class="secondary-btn">Participar en el Sorteo</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/landing_img_1.png" alt="Invicta I-Tech 006">
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Dualidad Estética</h3>
+            <p>Lo suficientemente robusto para el deporte, pero con una estética elegante para la oficina.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Monitoreo Consciente</h3>
+            <p>Control de ritmo cardíaco y sueño. Valida tu esfuerzo diario sin presiones.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-sync-alt"></i>
+            <h3>Conexión Total</h3>
+            <p>Notificaciones inteligentes sin distracciones. Mantén el foco en lo importante.</p>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <h2>Diseño en Acción</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track" id="carouselTrack">
+                    <!-- Carousel Items generated via JS to use local paths -->
+                </ul>
+            </div>
+            <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="sorteo" class="lead-gen">
+        <div class="lead-gen-container">
+            <div class="lead-text">
+                <h2>Únete al <span>Caminante Consciente</span></h2>
+                <p>Regístrate ahora para obtener un <strong>descuento exclusivo del 15%</strong> en tu primera compra y participa automáticamente en el <strong>sorteo de un INVICTA I-TECH 006</strong>.</p>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> Sorteo mensual de un smartwatch</li>
+                    <li><i class="fas fa-check-circle"></i> Tips de bienestar y productividad</li>
+                    <li><i class="fas fa-check-circle"></i> Acceso anticipado a nuevos pulsos</li>
+                </ul>
+            </div>
+            <div class="lead-form-wrapper">
+                <form id="leadForm" class="lead-form">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" required placeholder="Ej. Carlos Martínez">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" required placeholder="carlos@correo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono Móvil</label>
+                        <input type="tel" id="phone" required placeholder="+57 300 000 0000">
+                    </div>
+                    <button type="submit" class="submit-btn">Quiero mis beneficios</button>
+                    <p class="form-terms">Tus datos están seguros. No enviamos spam.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">INVICTA <span>I-TECH</span></div>
+            <p>Estrategia de Marketing Digital - ACA 2</p>
+            <p>Proyecto Universitario - CUN</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
